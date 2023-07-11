@@ -1,0 +1,6 @@
+node_modules
+.env
+
+# Editor directoris and files
+.vscode/*
+!.vscode/extensions.json
