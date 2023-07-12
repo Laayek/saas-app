@@ -19,15 +19,11 @@ const initialState = {
 const reducer = (state, action) => {
   switch (action.type) {
     case "SET_NAME":
-      return { ...state, name: action.payload };
     case "SET_EMAIL":
-      return { ...state, email: action.payload };
     case "SET_PHONE":
-      return { ...state, phone: action.payload };
     case "SET_INDUSTRY":
-      return { ...state, industry: action.payload };
     case "SET_ERROR":
-      return { ...state, error: action.payload };
+      return { ...state, [action.type.toLowerCase().split("_")[1]]: action.payload };
     case "ADD_CLIENT":
       return {
         ...state,
@@ -44,15 +40,15 @@ const reducer = (state, action) => {
 };
 
 export default function AddClients() {
-  const [clients, setClients] = useState([]);
+  const [clients, setClients] = useState([]); //
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState); //
 
   const toast = useToast();
   const finalRef = useRef(null);
   const initialRef = useRef(null);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const onSubmit = (e) => {
     e.preventDefault();

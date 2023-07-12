@@ -52,16 +52,16 @@ export default function CustomTable({ onOpen, isLoading, filteredUsers }) {
                     .map((_, index) => (
                       <Tr key={index}>
                         <Td fontWeight="600">
-                          <Skeleton height="1.25rem" />
+                          <Skeleton width="15rem" height="1.25rem" />
                         </Td>
                         <Td>
-                          <Skeleton height="1.25rem" />
+                          <Skeleton width="15rem" height="1.25rem" />
                         </Td>
                         <Td>
-                          <Skeleton height="1.25rem" />
+                          <Skeleton width="15rem" height="1.25rem" />
                         </Td>
                         <Td>
-                          <Skeleton height="1.25rem" />
+                          <Skeleton width="15rem" height="1.25rem" />
                         </Td>
                         <Td isNumeric>
                           <Box display="flex" justifyContent="right" gap="1rem">

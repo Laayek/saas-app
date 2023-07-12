@@ -12,7 +12,7 @@ export default function Search({ searchQuery, handleSearch }) {
         <InputLeftElement pointerEvents="none">
           <Search2Icon color={theme.color.secondary} />
         </InputLeftElement>
-        <Input type="text" value={searchQuery} onChange={handleSearch} />
+        <Input type="text" placeholder="Search" value={searchQuery} onChange={handleSearch} />
       </InputGroup>
     </>
   );
